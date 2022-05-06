@@ -1,0 +1,123 @@
+.register{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(93, 67, 207); */
+    background: rgb(186,177,226);
+    background: linear-gradient(18deg, rgba(186,177,226,1) 0%, rgba(198,164,240,1) 51%, rgba(73,45,200,1) 100%);
+}
+
+.reWrapper{
+    padding: 50px;
+    /* background-color: rgb(245, 245, 245); */
+    background: rgb(217,217,217);
+    background: linear-gradient(18deg, rgba(217,217,217,1) 0%, rgba(232,232,232,1) 51%, rgba(255,255,255,1) 100%);
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 3px 6px -2px rgba(0,0,0,0.4); 
+    box-shadow: 1px 3px 6px -2px rgba(0,0,0,0.4);
+    
+}
+
+.inscrire{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.3em;
+    font-weight: 500;
+    color: rgb(93, 67, 207);
+}
+
+.reTop{
+    text-align: center;
+}
+
+.reMid{
+    /*background-color: violet;*/
+    align-items: center;
+}
+
+.rusername{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-size: 24px;
+    justify-content: space-around;
+    color: rgb(93, 67, 207);
+    font-weight: 700;
+}
+
+.rlogin{
+    margin-bottom: 5%;
+    font-size: 24px;
+    color: rgb(93, 67, 207);
+    font-weight: 700;
+}
+
+.rpassword{
+    margin-bottom: 5%;
+    font-size: 24px;
+    color: rgb(93, 67, 207);
+    font-weight: 700;
+}
+
+.reBott{
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    gap: 1em;
+}
+
+.rbuttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    gap: 50px;
+    border-radius: 40%;
+}
+
+.register label{
+    width: 160px;
+    display: inline-block;
+}
+
+.register input{
+    padding:.4em .7em;
+    font-size: inherit;
+    border: 0;
+    border-radius: 5%;
+}
+
+.register button{
+    padding: .7em 2em;
+    border: 0;
+    font-size: 22px;
+    cursor:pointer;
+    border-radius: 5%;
+}
+
+.rsubmit-btn{
+    /* background-color: rgb(52, 38, 112); */
+    background: rgb(93, 67, 207);
+    /* background: linear-gradient(18deg, rgba(155,135,238,1) 0%, rgba(169,100,255,1) 51%, rgba(91,83,128,1) 100%); */
+    color: #fff;
+    transition: 300ms;
+}
+.rsubmit-btn:hover{
+    background-color: rgb(41, 32, 85);
+    color: #fff;
+}
+
+.rundo-btn{
+    background: rgb(93, 67, 207);
+    /* background: linear-gradient(18deg, rgba(155,135,238,1) 0%, rgba(169,100,255,1) 51%, rgba(91,83,128,1) 100%); */
+    color: #fff;
+}
+
+.rundo-btn:hover{
+    background-color: rgb(41, 32, 85);
+    color: #fff; 
+}
+
+/* input::placeholder{ */
+/* } */
