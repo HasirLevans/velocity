@@ -17,12 +17,12 @@ router.put("/:id", async (req, res) => {
       const user = await User.findByIdAndUpdate(req.params.id, {
         $set: req.body,
       });
-      res.status(200).json("Account has been updated");
+      res.status(200).json("Le compte a été mis à jour !");
     } catch (err) {
       return res.status(500).json(err);
     }
   } else {
-    return res.status(403).json("You can update only your account!");
+    return res.status(403).json("Vous ne pouvez mettre à jour que votre compte !");
   }
 });
 
@@ -31,12 +31,12 @@ router.delete("/:id", async (req, res) => {
   if (req.body.userId === req.params.id || req.body.isAdmin) {
     try {
       await User.findByIdAndDelete(req.params.id);
-      res.status(200).json("Account has been deleted");
+      res.status(200).json("Le compte a été supprimé !");
     } catch (err) {
       return res.status(500).json(err);
     }
   } else {
-    return res.status(403).json("You can delete only your account!");
+    return res.status(403).json("Vous ne pouvez supprimé que votre compte !");
   }
 });
 
@@ -61,15 +61,15 @@ router.put("/:id/follow", async (req, res) => {
       if (!user.followers.includes(req.body.userId)) {
         await user.updateOne({ $push: { followers: req.body.userId } });
         await currentUser.updateOne({ $push: { followings: req.params.id } });
-        res.status(200).json("user has been followed");
+        res.status(200).json("L'utilisateur a été follow !");
       } else {
-        res.status(403).json("you allready follow this user");
+        res.status(403).json("Vous suivez déjà cet utilisateur !");
       }
     } catch (err) {
       res.status(500).json(err);
     }
   } else {
-    res.status(403).json("you cant follow yourself");
+    res.status(403).json("Vous ne pouvez pas vous suivre vous-même !");
   }
 });
 
@@ -83,15 +83,15 @@ router.put("/:id/unfollow", async (req, res) => {
         if (user.followers.includes(req.body.userId)) {
           await user.updateOne({ $pull: { followers: req.body.userId } });
           await currentUser.updateOne({ $pull: { followings: req.params.id } });
-          res.status(200).json("user has been unfollowed");
+          res.status(200).json("L'utilisateur a été unfollow !");
         } else {
-          res.status(403).json("you dont follow this user");
+          res.status(403).json("Vous ne suivez pas cet utilisateur !");
         }
       } catch (err) {
         res.status(500).json(err);
       }
     } else {
-      res.status(403).json("you cant unfollow yourself");
+      res.status(403).json("Vous ne pouvez pas unfollow vous-même !");
     }
   });
 
