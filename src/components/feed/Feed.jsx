@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import "./feed.css"
 import Share from "../share/Share"
-import Post from "./../post/Post"
+import Post from "../post/Post"
 import Mypictures from "../mypictures/Mypictures"
 
 class Feed extends Component{

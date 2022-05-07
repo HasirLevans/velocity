@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Rightbar from "../../components/rightbar/Rightbar"
-import Feed from "../../components/feed/Feed"
+import Rightbar from "../rightbar/Rightbar"
+import Feed from "../feed/Feed"
 
 class Profil extends Component {
     

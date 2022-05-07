@@ -2,7 +2,7 @@ const router = require("express").Router();
 const Post = require("../models/Post");
 const User = require("../models/User");
 
-//create a post
+//créer un post
 
 router.post("/", async (req, res) => {
   const newPost = new Post(req.body);
@@ -13,7 +13,7 @@ router.post("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
-//update a post
+//update un post
 
 router.put("/:id", async (req, res) => {
   try {
@@ -28,7 +28,7 @@ router.put("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
-//delete a post
+//delete un post
 
 router.delete("/:id", async (req, res) => {
   try {
@@ -44,7 +44,7 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-//like / dislike a post
+//like / dislike un post
 router.put("/:id/like", async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
@@ -59,7 +59,7 @@ router.put("/:id/like", async (req, res) => {
     res.status(500).json(err);
   }
 });
-//get a post
+//get un post
 
 router.get("/:id", async (req, res) => {
   try {

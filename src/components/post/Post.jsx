@@ -1,6 +1,6 @@
 import React from 'react'
 import "./post.css"
-import { MoreVert, ThumbUp, Favorite } from "@material-ui/icons"
+import { MoreVert, Favorite } from "@material-ui/icons"
 
 export default function Post() {
     
