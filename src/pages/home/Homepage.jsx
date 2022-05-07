@@ -6,37 +6,18 @@ import Rightbar from "../../components/rightbar/Rightbar";
 import Feed from "../../components/feed/Feed";
 
 
-class Homepage extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            cFeed : "SPost"
-        }
-    }
-
-    GoToP = () =>{
-        this.props.AllerProfile();
-    }
-
-    GoToOut = () =>{
-        this.props.AllerConn();
-    }
+export default function Homepage() {
     
-
-    render() {
-        return(
-            <div>
-                <Topbar goToP = {this.GoToP} goToOut = {this.GoToOut}/>
-                <div className="homeContainer">
-                    <Leftbar/>
-                    <Feed/>
-                    <Rightbar/>
-                </div>
+    return(
+        <>
+            <Topbar />
+            <div className="homeContainer">
+                <Leftbar/>
+                <Feed/>
+                <Rightbar/>
             </div>
-        )
-    }
+        </>
+    )
 }
-
-export default Homepage;
 
 

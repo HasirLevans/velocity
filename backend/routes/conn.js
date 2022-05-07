@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const User = require("../entities/User");
+const User = require("../models/User");
 const bcrypt = require("bcrypt");
 
 //REGISTER

@@ -3,52 +3,37 @@ import Homepage from './pages/home/Homepage'
 import Profile from './pages/profile/Profile'
 import Connexion from './pages/connexion/Connexion'
 import Register from './pages/register/Register'
+import {
+  BrowserRouter as Router,
+  Routes as Switch,
+  Route,
+  Navigate as Redirect,
+} from "react-router-dom";
 
-class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      cPage : "Connexion",
-      isConnected : false,
-    }
-  }
-
-  AllerAProfile = () =>{
-    this.setState({cPage : "Profile"})
-  }
-
-  AllerAHome = () => {
-    this.setState({cPage : "Homepage"})
-  }
-
-  AllerAConn = () =>{
-    this.setState({cPage : "Connexion"})
-  }
-
-  AllerARegister = () =>{
-    this.setState({cPage : "Register"})
-  }
-
-
-
-  render(){
-
-    if(this.state.cPage === "Connexion"){
-      return <Connexion AllerHome = {this.AllerAHome} AllerRegister ={this.AllerARegister}/>
-    }
-
-    if(this.state.cPage === "Register"){
-      return <Register AllerHome = {this.AllerAHome} AllerConn = {this.AllerAConn}/>
-    }
-
-    if(this.state.cPage === "Homepage"){
-      return <Homepage AllerProfile = {this.AllerAProfile} AllerConn = {this.AllerAConn}/>
-    }
-    
-    if(this.state.cPage === "Profile"){
-      return <Profile AllerHome = {this.AllerAHome} AllerConn = {this.AllerAConn}/>
-    }
-  } 
+function App() {
+  
+  return (
+    <Router>
+      <Switch>
+        <Route path="*">
+          <Homepage />
+        </Route>
+        <Route exact path="/">
+          <Homepage />
+        </Route>
+        <Route path="/connexion">
+          <Connexion />
+        </Route>
+        <Route path="/register">
+          <Register />
+        </Route>
+        <Route path="/profile">
+          <Profile />
+        </Route>
+      </Switch>
+    </Router>
+  )
+  
 }
 
 export default App;
