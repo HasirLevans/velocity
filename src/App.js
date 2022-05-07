@@ -15,21 +15,11 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="*">
-          <Homepage />
-        </Route>
-        <Route exact path="/">
-          <Homepage />
-        </Route>
-        <Route path="/connexion">
-          <Connexion />
-        </Route>
-        <Route path="/register">
-          <Register />
-        </Route>
-        <Route path="/profile">
-          <Profile />
-        </Route>
+        <Route  path="/" element={<Homepage />} />
+        <Route  path="*" element={<Homepage />} />
+        <Route  path="/connexion" element={<Connexion />} />
+        <Route  path="/register" element={<Register />} />
+        <Route  path="/profile" element={<Profile />} />
       </Switch>
     </Router>
   )
