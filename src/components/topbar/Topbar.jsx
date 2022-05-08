@@ -1,15 +1,31 @@
 import  React from 'react';
 import "./topbar.css";
 import { Map, Search, Person, Chat, Notifications, Cancel } from "@material-ui/icons";
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import axios from "axios"
 import { useContext} from "react"
 import { ConnContext } from "../../context/ConnContext";
+import { useReducer } from "react";
 
 
 export default function Topbar() {
-  const { user } = useContext(ConnContext);
+  let { user } = useContext(ConnContext);
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+  const navigate = useNavigate();
+  const INITIAL_STATE = {
+    user: null,
+    isFetching: false,
+    error: false,
+  };
+  //const [state, dispatch] = useReducer(ConnReducer, INITIAL_STATE);
+
+  const deco = () => {
+    console.log(user)
+    user.dispatch();
+    console.log(user)
+    //navigate("/connexion");
+  }
+
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
@@ -52,9 +68,7 @@ export default function Topbar() {
           />
         </Link>
         <div className="logoutIcon">
-          <Link to="/connexion">
-            <Cancel />
-          </Link>
+            <Cancel onClick={deco}/>
         </div>
       </div>
     </div>

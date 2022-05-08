@@ -18,7 +18,7 @@ export default function Profile() {
   const [followed, setFollowed] = useState(
     currentUser.followings.includes(user?.id)
   );
-
+  
   /*useEffect(() => {
     setFollowed(currentUser.followings.includes(user?.id));
   })*/
@@ -32,7 +32,6 @@ export default function Profile() {
   }, [username]);
 
   
-
   const handleClick = async () => {
     try {
       if (followed) {
