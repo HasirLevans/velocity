@@ -69,3 +69,29 @@
 .rightbarUsername{
     font-weight: 500;
 }
+
+.fbutton{
+    display: flex;
+    align-items: center;
+    margin-left : 2em;
+}
+.followButton {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: rgb(93, 67, 207);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    
+}
+
+.followButton:focus{
+    outline: none;
+}
