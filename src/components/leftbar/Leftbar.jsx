@@ -57,6 +57,27 @@ class Leftbar extends Component  {
                             <img className="leftbarFriendImg" src="/assets/person/4.jpg" alt="" />
                             <span className="leftbarFriendName">Ami3</span>
                         </li>
+                        <li className="leftbarFriend">
+                            <img className="leftbarFriendImg" src="/assets/person/2.jpg" alt="" />
+                            <span className="leftbarFriendName">Ami1</span>
+                        </li>
+                        <li className="leftbarFriend">
+                            <img className="leftbarFriendImg" src="/assets/person/2.jpg" alt="" />
+                            <span className="leftbarFriendName">Ami1</span>
+                        </li>
+                        <li className="leftbarFriend">
+                            <img className="leftbarFriendImg" src="/assets/person/2.jpg" alt="" />
+                            <span className="leftbarFriendName">Ami1</span>
+                        </li>
+                        <li className="leftbarFriend">
+                            <img className="leftbarFriendImg" src="/assets/person/2.jpg" alt="" />
+                            <span className="leftbarFriendName">Ami1</span>
+                        </li>
+                        <li className="leftbarFriend">
+                            <img className="leftbarFriendImg" src="/assets/person/2.jpg" alt="" />
+                            <span className="leftbarFriendName">Ami1</span>
+                        </li>
+                        
                     </ul>
                 </div>
             </div>
