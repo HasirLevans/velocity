@@ -1,4 +1,4 @@
-import  React, {Component} from 'react';
+import  React from 'react';
 import "./Homepage.css"
 import Topbar from "../../components/topbar/Topbar";
 import Leftbar from "../../components/leftbar/Leftbar";
@@ -19,5 +19,4 @@ export default function Homepage() {
         </>
     )
 }
-
 

@@ -22,28 +22,22 @@
     justify-content: center;
 }
 
-.registerLogo {
-    font-size: 50px;
-    font-weight: 800;
-    color: #1775ee;
-    margin-bottom: 10px;
-}
-
 .registerinDesc {
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 2.3em;
-    color: rgb(255, 255, 255);
     font-weight: 500;
+    color: white;
+    margin-right: 1em;
 
 }
 
 .registerBox {
     height: 400px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
+    padding: 50px;
+    background-color: rgb(246, 237, 255);
+    border-radius: 15%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -51,10 +45,13 @@
 
 .registerInput {
     height: 50px;
-    border-radius: 10px;
-    border: 1px solid gray;
+    border-radius: 15%;
+    border: 1px violet;
+    background-color: rgb(249, 249, 249);
     font-size: 18px;
     padding-left: 20px;
+    margin : 5px;
+    font-weight: 500;
 }
 
 .registerInput:focus {
@@ -71,6 +68,7 @@
     font-weight: 500;
     cursor: pointer;
     transition: 300ms;
+    margin-top: 10px;
 }
 
 .registerButton:hover{
@@ -85,11 +83,12 @@
 
 .connregister{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .connRegisterButton {
+    margin-top: 5px;
     width: 120%;
     align-self: center;
     height: 50px;
@@ -100,6 +99,7 @@
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
+    transition: 300ms;
 }
 
 .connRegisterButton:hover{

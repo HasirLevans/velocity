@@ -19,9 +19,9 @@ export default function Profile() {
     currentUser.followings.includes(user?.id)
   );
 
-  useEffect(() => {
+  /*useEffect(() => {
     setFollowed(currentUser.followings.includes(user?.id));
-  })
+  })*/
 
   useEffect(() => {
     const fetchUser = async () => {

@@ -28,8 +28,8 @@ router.put("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
-//delete un post
 
+//delete un post
 router.delete("/:id", async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
