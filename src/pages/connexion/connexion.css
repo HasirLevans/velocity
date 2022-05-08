@@ -1,152 +1,117 @@
-.connexion{
-    display: flex;
+.connexion {
+    width: 100vw;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
-    /* background-color: rgb(93, 67, 207); */
     background: rgb(186,177,226);
     background: linear-gradient(18deg, rgba(186,177,226,1) 0%, rgba(198,164,240,1) 51%, rgba(73,45,200,1) 100%);
-}
-
-.coWrapper{
-    padding: 50px;
-    /* background-color: rgb(245, 245, 245); */
-    background: rgb(217,217,217);
-    background: linear-gradient(18deg, rgba(217,217,217,1) 0%, rgba(232,232,232,1) 51%, rgba(255,255,255,1) 100%);
-    border-radius: 10px;
-    -webkit-box-shadow: 1px 3px 6px -2px rgba(0,0,0,0.4); 
-    box-shadow: 1px 3px 6px -2px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .connexionWrapper {
+    width: 70%;
+    height: 70%;
+    display: flex;
     
-}
-
-.connecter{
+  }
+  
+  .connexionLeft,
+  .connexionRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  
+  .connexionDesc {
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 2.3em;
     font-weight: 500;
-    color: rgb(93, 67, 207);
-}
-
-.coTop{
+    color: white;
+    margin-right: 1em;
+  }
+  
+  .connexionBox{
+      height: 300px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  
+  .connexionInput{
+      height: 50px;
+      border-radius: 10px;
+      border: 1px solid gray;
+      font-size: 18px;
+      padding-left: 20px;
+      justify-content: space-around;
+      color: rgb(75, 75, 75);
+      font-weight: 500;
+  }
+  
+  .connexionInput:focus{
+      outline: none;
+  }
+  
+  .connexionButton{
+      height: 50px;
+      border-radius: 10px;
+      border: none;
+      background: rgb(93, 67, 207);
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      cursor: pointer;
+  }
+  
+  .connexionButton:focus{
+    outline: none;
+  }
+  
+  .connexionButton:hover{
+    background-color: rgb(41, 32, 85);
+    color: #fff;
+  }
+  
+  .connexionForgot{
     text-align: center;
-}
+    color: rgb(75, 75, 75);;
+    font-weight: 500;
+  }
 
-.coMid{
-    /*background-color: violet;*/
-    align-items: center;
-}
-
-.login{
-    margin-top: 10%;
-    margin-bottom: 5%;
-    font-size: 24px;
-    justify-content: space-around;
+  .connexionForgot:hover{
     color: rgb(93, 67, 207);
-    font-weight: 700;
-}
-
-.password{
-    margin-bottom: 5%;
-    font-size: 24px;
-    color: rgb(93, 67, 207);
-    font-weight: 700;
-}
-
-.coMBot{
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
-    gap: 1em;
-}
-
-.mdpforgot{
-    margin-top: 5%;
-    margin-bottom: 5%;
-    font-size: 16px;
-    color: blueviolet;
-    font-weight: 700;
-}
-
-.register1{
-    margin-top: 5%;
-    margin-bottom: 5%;
-    font-size: 16px;
-    color: blueviolet;
-    font-weight: 700;
-}
-
-.coBott{
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
-    gap: 1em;
-}
-
-.buttons{
+    font-weight: 800;
+    cursor : pointer; 
+  }
+  
+  .connexionregister{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
-    gap: 50px;
-    border-radius: 40%;
-}
+  }
 
-.connexion label{
-    width: 160px;
-    display: inline-block;
-}
-
-.connexion input{
-    padding:.4em .7em;
-    font-size: inherit;
-    border: 0;
-    border-radius: 5%;
-}
-
-.connexion button{
-    padding: .7em 2em;
-    border: 0;
-    font-size: 22px;
-    cursor:pointer;
-    border-radius: 5%;
-}
-
-.submit-btn{
-    /* background-color: rgb(52, 38, 112); */
+  .connexionRegisterButton{
+    width: 110%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
     background: rgb(93, 67, 207);
-    /* background: linear-gradient(18deg, rgba(155,135,238,1) 0%, rgba(169,100,255,1) 51%, rgba(91,83,128,1) 100%); */
-    color: #fff;
-    transition: 300ms;
-}
-.submit-btn:hover{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .connexionRegisterButton:hover{
     background-color: rgb(41, 32, 85);
     color: #fff;
-}
-
-.undo-btn{
-    background: rgb(93, 67, 207);
-    /* background: linear-gradient(18deg, rgba(155,135,238,1) 0%, rgba(169,100,255,1) 51%, rgba(91,83,128,1) 100%); */
-    color: #fff;
-}
-
-.undo-btn:hover{
-    background-color: rgb(41, 32, 85);
-    color: #fff; 
-}
-
-.mdpforgot:hover{
-    color: black;
     font-weight: 800;
     cursor : pointer; 
-}
-
-.register1:hover{
-    color: black;
-    font-weight: 800;
-    cursor : pointer; 
-}
-
-
-/* input::placeholder{ */
-/* } */
+  }

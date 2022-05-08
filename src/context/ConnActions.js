@@ -10,3 +10,13 @@ export const ConnSuccess = (user) => ({
 export const ConnFailure = () => ({
     type: "CONN_FAILURE",
 });
+
+export const Follow = (userId) => ({
+    type: "FOLLOW",
+    payload: userId,
+});
+  
+export const Unfollow = (userId) => ({
+    type: "UNFOLLOW",
+    payload: userId,
+});

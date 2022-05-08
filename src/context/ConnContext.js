@@ -12,14 +12,21 @@ const INITIAL_STATE = {
   export const ConnContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(ConnReducer, INITIAL_STATE);
 
+    useEffect(()=>{
+      localStorage.setItem("user", JSON.stringify(state.user))
+    },[state.user])
+
     return (
         <ConnContext.Provider
             value={{
             user: state.user,
             isFetching: state.isFetching,
             error: state.error,
-            dispatch
-            }}
-        ></ConnContext.Provider>
+            dispatch,
+            }}  
+        >
+          {children}
+        </ConnContext.Provider>
     )
   }
+

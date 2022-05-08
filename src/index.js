@@ -1,12 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import {ConnContextProvider} from './context/ConnContext'
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import { ConnContextProvider } from "./context/ConnContext";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <BrowserRouter>
+    <ConnContextProvider>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </ConnContextProvider>
+  </BrowserRouter>,
+  document.getElementById("root")
 );
- 

@@ -1,8 +1,7 @@
-import  React, {Component} from 'react';
+import  React from 'react';
 import "./profile.css";
 import Topbar from "../../components/topbar/Topbar";
 import Leftbar from "../../components/leftbar/Leftbar"
-import Profil from "../../components/profil/Profil"
 import Rightbar from "../../components/rightbar/Rightbar"
 import Feed from "../../components/feed/Feed"
 import axios from "axios"
@@ -16,13 +15,11 @@ export default function Profile() {
   const username = useParams().username;
 
   useEffect(() => {
-      const fetchUser = async () => {
-        const res = await axios.get(`users?username=${username}`);
-        setUser(
-          res.data
-        );
-      };
-      fetchUser();
+    const fetchUser = async () => {
+      const res = await axios.get(`/users?username=${username}`);
+      setUser(res.data);
+    };
+    fetchUser();
   }, [username]);
 
   return(
@@ -35,13 +32,16 @@ export default function Profile() {
         <div className='profileRightTop'>
             
             <div className='profileCover'>
-            <img className='photoDeCouverture' src={user.coverPicture || PF+"person/wallpaper.jpg"} alt=''/>
-            <img className='photoDeProfil' src={user.profilePicture || PF+"person/baseavatar.jpg"} alt=''/>
+            <img className='photoDeCouverture' src={user.coverPicture ? PF+user.coverPicture : PF+"person/wallpaper.jpg"} alt=''/>
+            <img className='photoDeProfil' src={user.profilePicture ? PF+user.profilePicture : PF+"person/baseavatar.jpg"} alt=''/>
             </div>
 
             <div className='infoProfil'>
                 <h4 className='nomPrenom'>{user.username}</h4>
                 <span className='description'>{user.desc}</span>
+                <span className='city'>{user.city}</span>
+                <span className='from'>{user.from}</span>
+                <span className='relation'>{user.relationship}</span>
                 <div className='Follows'>
                     <li className='Followers'>280 Followers</li>
                     <li className='Following'>280 Followings</li>

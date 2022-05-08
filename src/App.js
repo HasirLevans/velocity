@@ -1,4 +1,4 @@
-import  React, {Component} from 'react';
+import  React from 'react';
 import Homepage from './pages/home/Homepage'
 import Profile from './pages/profile/Profile'
 import Connexion from './pages/connexion/Connexion'
@@ -16,15 +16,15 @@ function App() {
   
   const {user} = useContext(ConnContext)
   return (
-    <Router>
+    
       <Switch>
-        <Route  path="/" element={<Homepage />} />
+        <Route  path="/" element={user ? <Homepage /> : <Register/>} />
         <Route  path="*" element={<Homepage />} />
         <Route  path="/connexion" element={user ? <Navigate to="/"/> : <Connexion />} />
         <Route  path="/register" element={user ? <Navigate to="/"/> : <Register />} />
         <Route  path="/profile/:id" element={<Profile />} />
       </Switch>
-    </Router>
+    
   )
   
 }
