@@ -1,7 +1,8 @@
 .topbarContainer {
     height: 50px;
     width: 100%;
-    background-color: rgb(93, 67, 207);
+    background: rgb(186,177,226);
+    background: linear-gradient(18deg, rgba(186,177,226,1) 0%, rgba(198,164,240,1) 51%, rgba(73,45,200,1) 100%);
     display: flex;
     align-items: center;
     position: sticky;
@@ -15,11 +16,11 @@
     flex: 3;
 }
 
-.logo {
+.nameLogo {
     font-size: 24px;
     margin-left: 20px;
     font-weight: bold;
-    color: rgb(255, 255, 255);
+    color: rgb(93, 67, 207);
     cursor: pointer;
 }
 
@@ -72,33 +73,6 @@
     margin-left: 2em;
     font-size: 17px;
 }
-
-.topbarIcons {
-    display: flex;
-}
-
-.topbarIconItem{
-    margin-right: 30px;
-    cursor: pointer;
-    position: relative; /*postionne la page selon topbarIconItem */
-}
-
-/*
-.topbarIconBadge{
-    width: 15px;
-    height: 15px;
-    background-color: rgb(9, 255, 0);
-    border-radius: 50%;
-    color: rgb(255,255,255);
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-}
-*/
 
 .profilePicture{
     width: 32px;

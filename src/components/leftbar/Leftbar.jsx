@@ -1,6 +1,6 @@
 import React from 'react'
 import "./leftbar.css"
-import { InsertPhoto, Group, Bookmark, HelpOutline, Event, DirectionsBike } from "@material-ui/icons"
+import { InsertPhoto, Group, Bookmark, Event, DirectionsBike } from "@material-ui/icons"
 
 export default function Leftbar(){
 
@@ -21,10 +21,6 @@ export default function Leftbar(){
                         <span className="leftbarListItemText">Events</span>
                     </li>
                     <li className="leftbarListItem">
-                        <HelpOutline className="leftbarIcon" />
-                        <span className="leftbarListItemText">Questions</span>
-                    </li>
-                    <li className="leftbarListItem">
                         <DirectionsBike className="leftbarIcon" />
                         <span className="leftbarListItemText">NFS</span>
                     </li>
@@ -33,7 +29,6 @@ export default function Leftbar(){
                         <span className="leftbarListItemText">Groups</span>
                     </li>
                 </ul>
-                {/* <button className="leftbarButton">Show More</button> */}
                 <hr className="leftbarHr"/>
                 <ul className="leftbarFriendList">
                     <li className="leftbarFriend">

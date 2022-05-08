@@ -19,18 +19,18 @@ export default function Topbar() {
   };
   //const [state, dispatch] = useReducer(ConnReducer, INITIAL_STATE);
 
-  const deco = () => {
+  /*const deco = () => {
     console.log(user)
     user.dispatch();
     console.log(user)
     //navigate("/connexion");
-  }
+  }*/
 
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">Velocity</span>
+          <span className="nameLogo">Velocity</span>
         </Link>
       </div>
       <div className="topbarCenter">
@@ -48,14 +48,6 @@ export default function Topbar() {
             <Map />
           </div>
         </div>
-        <div className="topbarIcons">
-          <div className="topbarIconItem">
-            <Chat />
-          </div>
-          <div className="topbarIconItem">
-            <Notifications />
-          </div>
-        </div>
         <Link to={`/profile/${user.username}`}>
           <img
             src={
@@ -68,7 +60,7 @@ export default function Topbar() {
           />
         </Link>
         <div className="logoutIcon">
-            <Cancel onClick={deco}/>
+            <Cancel onClick={() => window.location.reload()}/>
         </div>
       </div>
     </div>

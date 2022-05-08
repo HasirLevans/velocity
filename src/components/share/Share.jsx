@@ -1,6 +1,6 @@
 import React from "react";
 import "./share.css";
-import { PermMedia, Room, EmojiEmotions, Cancel } from "@material-ui/icons";
+import { PermMedia, Cancel } from "@material-ui/icons";
 import axios from "axios";
 import { useState, useRef, useContext } from "react";
 import { ConnContext } from "../../context/ConnContext";
@@ -73,14 +73,6 @@ export default function Share() {
                 onChange={(e) => setFile(e.target.files[0])}
               />
             </label>
-            <div className="shareOption">
-              <Room htmlColor="green" className="shareIcon" />
-              <span className="shareOptionText">Location</span>
-            </div>
-            <div className="shareOption">
-              <EmojiEmotions htmlColor="goldenrod" className="shareIcon" />
-              <span className="shareOptionText">Emotions</span>
-            </div>
           </div>
           <button className="shareButton" type="submit">
             Share
