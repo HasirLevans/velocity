@@ -35,7 +35,7 @@ export default function Post({ post }) {
                 <div className="postTop">
                     <div className="postTopLeft">
                         <Link to={`profile/${user.username}`}>
-                            <img className="postPP" src={user.profilePicture || PF+"person/baseavatar.jpg"} alt="" />
+                            <img className="postPP" src={user.profilePicture ? PF + user.profilePicture : PF+"person/baseavatar.jpg"} alt="" />
                         </Link>
                         <span className="postUsername"> {user.username} </span>
                         <span className="postDate">{format(post.createdAt)}</span>
@@ -52,9 +52,6 @@ export default function Post({ post }) {
                     <div className="postBotLeft">
                         <Favorite htmlColor="silver" className="likeIcon" onClick={likeHandler}/>
                         <span className="postLikeCounter">{like} personnes ont aimé !</span>
-                    </div>
-                    <div className="postBotRight">
-                        <span className="postCommentText">10 commentaires</span>
                     </div>
                 </div>
             </div>

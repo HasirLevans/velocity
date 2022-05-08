@@ -10,16 +10,8 @@ class Leftbar extends Component  {
                 <div className="letfbarWrapper">
                     <ul className="leftbarList">
                         <li className="leftbarListItem">
-                            <RssFeed className="leftbarIcon"/>
-                            <span className="leftbarListItemText">My Feeds</span>
-                        </li>
-                        <li className="leftbarListItem">
                             <InsertPhoto className="leftbarIcon" />
                             <span className="leftbarListItemText">My Pictures</span>
-                        </li>
-                        <li className="leftbarListItem">
-                            <PlayCircleFilledOutlined className="leftbarIcon" />
-                            <span className="leftbarListItemText"> My Videos</span>
                         </li>
                         <li className="leftbarListItem">
                             <Bookmark className="leftbarIcon" />

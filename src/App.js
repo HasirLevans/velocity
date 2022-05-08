@@ -7,19 +7,22 @@ import {
   BrowserRouter as Router,
   Routes as Switch,
   Route,
-  Navigate as Redirect,
+  Navigate,
 } from "react-router-dom";
+import {useContext} from "react"
+import {ConnContext} from "./context/ConnContext"
 
 function App() {
   
+  const {user} = useContext(ConnContext)
   return (
     <Router>
       <Switch>
         <Route  path="/" element={<Homepage />} />
         <Route  path="*" element={<Homepage />} />
-        <Route  path="/connexion" element={<Connexion />} />
-        <Route  path="/register" element={<Register />} />
-        <Route  path="/profile" element={<Profile />} />
+        <Route  path="/connexion" element={user ? <Navigate to="/"/> : <Connexion />} />
+        <Route  path="/register" element={user ? <Navigate to="/"/> : <Register />} />
+        <Route  path="/profile/" element={<Profile />} />
       </Switch>
     </Router>
   )

@@ -5,7 +5,9 @@ import {Link} from "react-router-dom"
 
 
 export default function Topbar() {
-  
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+
+
 
 
   return (
@@ -44,11 +46,13 @@ export default function Topbar() {
             <span className="topbarIconBadge">5</span>
           </div>
         </div>
-        <Link to="/profile" style={{textDecoration:"none"}}>
-          <img src="/assets/person/1.jpg" alt="" className="profilePicture"  />
+        <Link to={"/profile"} style={{textDecoration:"none"}}>
+          <img src={ PF+"/person/baseavatar.jpg"} alt="" className="profilePicture"  />
         </Link>
         <div className="logoutIcon">
-          <Cancel onClick = {() => this.props.goToOut()}/>
+          <Link to="/connexion">
+            <Cancel />
+          </Link>
         </div>
       </div>
     </div>
