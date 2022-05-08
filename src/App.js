@@ -22,7 +22,7 @@ function App() {
         <Route  path="*" element={<Homepage />} />
         <Route  path="/connexion" element={user ? <Navigate to="/"/> : <Connexion />} />
         <Route  path="/register" element={user ? <Navigate to="/"/> : <Register />} />
-        <Route  path="/profile/" element={<Profile />} />
+        <Route  path="/profile/:id" element={<Profile />} />
       </Switch>
     </Router>
   )

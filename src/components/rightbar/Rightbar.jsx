@@ -1,7 +1,7 @@
 import React from 'react'
 import "./rightbar.css"
 
-export default function Rightbar() {
+export default function Rightbar({user}) {
 
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
     
