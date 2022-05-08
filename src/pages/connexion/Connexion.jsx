@@ -3,6 +3,7 @@ import "./connexion.css";
 import { useContext, useRef } from "react";
 import {loginCall} from "../../apiCalls"
 import {ConnContext} from "../../context/ConnContext"
+import {Link} from "react-router-dom"
 
 export default function Connexion(){
     const email = useRef();
@@ -34,12 +35,16 @@ export default function Connexion(){
                     </div>
                     <div className="coMBot">
                         <span className="mdpforgot"> Mot de passe oublié ?</span>
-                        <span className="register1" > Pas de compte ? Inscrivez-vous</span>
+                        <Link to="/register" style={{textDecoration:"none"}}>
+                            <span className="register1" > Pas de compte ? Inscrivez-vous</span>
+                        </Link>
                     </div>
                     
                     <div className="coBott">
                         <div className="buttons">
-                            <button className="submit-btn" type="submit" id="connect" >{isFetching ? "loading" : "Connexion"}</button>
+                            <Link to="/">
+                                <button className="submit-btn" type="submit" id="connect" >{isFetching ? "loading" : "Connexion"}</button>
+                            </Link>
                             <button className='undo-btn'>Annuler</button>
                         </div>
                     </div>
