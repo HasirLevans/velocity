@@ -14,14 +14,7 @@ export default function Profile() {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const [user, setUser] = useState({});
   const username = useParams().username;
-  const { user: currentUser, dispatch } = useContext(ConnContext);
-  const [followed, setFollowed] = useState(
-    currentUser.followings.includes(user?.id)
-  );
   
-  /*useEffect(() => {
-    setFollowed(currentUser.followings.includes(user?.id));
-  })*/
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -32,22 +25,22 @@ export default function Profile() {
   }, [username]);
 
   
-  const handleClick = async () => {
-    try {
-      if (followed) {
-        await axios.put(`/users/${user._id}/unfollow`, {
-          userId: currentUser._id,
-        });
-        dispatch({ type: "UNFOLLOW", payload: user._id });
-      } else {
-        await axios.put(`/users/${user._id}/follow`, {
-          userId: currentUser._id,
-        });
-        dispatch({ type: "FOLLOW", payload: user._id });
-      }
-      setFollowed(!followed);
-    } catch (err) {}
-  };
+  // const handleClick = async () => {
+  //   try {
+  //     if (followed) {
+  //       await axios.put(`/users/${user._id}/unfollow`, {
+  //         userId: currentUser._id,
+  //       });
+  //       dispatch({ type: "UNFOLLOW", payload: user._id });
+  //     } else {
+  //       await axios.put(`/users/${user._id}/follow`, {
+  //         userId: currentUser._id,
+  //       });
+  //       dispatch({ type: "FOLLOW", payload: user._id });
+  //     }
+  //     setFollowed(!followed);
+  //   } catch (err) {}
+  // };
 
   return (
     <>
@@ -80,14 +73,14 @@ export default function Profile() {
               <h4 className="nomPrenom">{user.username}</h4>
               <span className="description">{user.desc}</span>
             </div>
-            <div className="fbutton">
+            {/* <div className="fbutton">
               {user.username !== currentUser.username && (
                 <button className="followButton" onClick={handleClick}>
                   {followed ? "Unfollow" : "Follow"}
                   {followed ? <Remove /> : <Add />}
                 </button>
               )}
-            </div>
+            </div> */}
           </div>
           <div className="profileRightBottom">
             <Feed username={username} />

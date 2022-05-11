@@ -4,7 +4,7 @@ import Profile from './pages/profile/Profile'
 import Connexion from './pages/connexion/Connexion'
 import Register from './pages/register/Register'
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Routes as Switch,
   Route,
   Navigate,
